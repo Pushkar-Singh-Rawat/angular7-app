@@ -12,6 +12,7 @@ export class UsersComponent implements OnInit {
 
   ngOnInit() {
     this.getUserDataService.getUserData().subscribe((data)=>{
+      console.log(data);
     this.userData=Array.from(Object.keys(data),k=>data[k]);
     console.log(this.userData);
     });
